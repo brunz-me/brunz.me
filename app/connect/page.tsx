@@ -3,8 +3,8 @@ import PageLayout from '@/components/PageLayout'
 const links = [
   {
     label: 'Twitter',
-    href: 'https://x.com/lebraat',
-    description: '@lebraat',
+    href: 'https://x.com/brunz_____',
+    description: '@brunz_____',
   },
   {
     label: 'LinkedIn',

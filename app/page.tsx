@@ -32,7 +32,7 @@ export default function Home() {
           </li>
           <li>
             <a
-              href="https://x.com/lebraat"
+              href="https://x.com/brunz_____"
               target="_blank"
               rel="noopener noreferrer"
               className="group block"
@@ -40,7 +40,7 @@ export default function Home() {
               <span className="font-semibold group-hover:underline">
                 Twitter
               </span>
-              <p className="text-neutral-400">@lebraat</p>
+              <p className="text-neutral-400">@brunz_____</p>
             </a>
           </li>
           <li>
