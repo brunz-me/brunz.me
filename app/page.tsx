@@ -45,7 +45,7 @@ export default function Home() {
           </li>
           <li>
             <a
-              href="https://t.me/lebraat"
+              href="https://t.me/brunz_tech"
               target="_blank"
               rel="noopener noreferrer"
               className="group block"
@@ -53,7 +53,7 @@ export default function Home() {
               <span className="font-semibold group-hover:underline">
                 Telegram
               </span>
-              <p className="text-neutral-400">@lebraat</p>
+              <p className="text-neutral-400">@brunz_tech</p>
             </a>
           </li>
           <li>
