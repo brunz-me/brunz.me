@@ -71,7 +71,7 @@ export default function Home() {
           </li>
           <li>
             <a
-              href="https://github.com/lebraat"
+              href="https://github.com/brunz-me"
               target="_blank"
               rel="noopener noreferrer"
               className="group block"
@@ -79,7 +79,7 @@ export default function Home() {
               <span className="font-semibold group-hover:underline">
                 GitHub
               </span>
-              <p className="text-neutral-400">@lebraat</p>
+              <p className="text-neutral-400">@brunz-me</p>
             </a>
           </li>
         </ul>

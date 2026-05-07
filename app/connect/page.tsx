@@ -13,8 +13,8 @@ const links = [
   },
   {
     label: 'GitHub',
-    href: 'https://github.com/lebraat',
-    description: '@lebraat',
+    href: 'https://github.com/brunz-me',
+    description: '@brunz-me',
   },
 ]
 
