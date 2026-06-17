@@ -69,8 +69,8 @@ export default function AvatarPopup() {
               </div>
 
               <a
-                href="/avatar.png"
-                download="daniel-brunsdon.png"
+                href="/avatar-full.webp"
+                download="daniel-brunsdon.webp"
                 className="text-[12px] text-neutral-400 hover:text-black transition-colors underline underline-offset-2"
               >
                 Download full-res photo

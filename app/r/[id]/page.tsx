@@ -41,7 +41,7 @@ export default async function ResumePage({ params }: { params: Promise<{ id: str
         {/* Header */}
         <header className="mb-6 flex items-center gap-4">
           <img
-            src="/avatar.png"
+            src="/avatar-web.webp"
             alt="Daniel Brunsdon"
             className="w-12 h-12 rounded-full object-cover flex-shrink-0"
           />
