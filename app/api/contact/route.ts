@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
 
 export async function POST(request: Request) {
   try {
@@ -33,25 +34,22 @@ export async function POST(request: Request) {
       );
     }
 
-    // TODO: Wire up email delivery (Resend, SendGrid, etc.)
-    // For now, log the message and return success.
-    // When ready, send to dan.brunsdon@gmail.com via:
-    //   import { Resend } from 'resend';
-    //   const resend = new Resend(process.env.RESEND_API_KEY);
-    //   await resend.emails.send({
-    //     from: 'contact@brunz.me',
-    //     to: 'dan.brunsdon@gmail.com',
-    //     subject: `Contact form: ${name}`,
-    //     text: `From: ${name} (${email})\n\n${message}`,
-    //   });
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
-    console.log("[contact-form]", { name, email, message: message.slice(0, 100) });
+    await resend.emails.send({
+      from: "brunz.me <contact@brunz.me>",
+      to: process.env.CONTACT_EMAIL!,
+      replyTo: email,
+      subject: `Contact form: ${name}`,
+      text: `From: ${name} (${email})\n\n${message}`,
+    });
 
     return NextResponse.json({ success: true });
-  } catch {
+  } catch (err) {
+    console.error("[contact-form] Send failed:", err);
     return NextResponse.json(
-      { error: "Invalid request" },
-      { status: 400 }
+      { error: "Failed to send message" },
+      { status: 500 }
     );
   }
 }

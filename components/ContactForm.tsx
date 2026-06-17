@@ -205,13 +205,7 @@ export default function ContactForm() {
 
                 {status === "error" && (
                   <p className="text-[12px] text-red-500">
-                    Something went wrong. You can also reach me at{" "}
-                    <a
-                      href="mailto:dan.brunsdon@gmail.com"
-                      className="underline"
-                    >
-                      dan.brunsdon@gmail.com
-                    </a>
+                    Something went wrong. Please try again.
                   </p>
                 )}
 
@@ -223,15 +217,6 @@ export default function ContactForm() {
                   {status === "sending" ? "Sending..." : "Send message"}
                 </button>
 
-                <p className="text-[11px] text-neutral-400 text-center">
-                  Or email directly:{" "}
-                  <a
-                    href="mailto:dan.brunsdon@gmail.com"
-                    className="underline underline-offset-2 hover:text-neutral-600 transition-colors"
-                  >
-                    dan.brunsdon@gmail.com
-                  </a>
-                </p>
               </form>
             )}
           </div>
