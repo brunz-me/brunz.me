@@ -53,7 +53,7 @@ export default async function ResumePage({ params }: { params: Promise<{ id: str
               Denver, CO &middot;{' '}
               <a href="https://linkedin.com/in/danbrunsdon" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-200 transition-colors">linkedin.com/in/danbrunsdon</a>
               {' '}&middot;{' '}
-              <a href="https://x.com/brunz_____" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-200 transition-colors">@brunz_____
+              <a href="https://x.com/brunz_____" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-200 transition-colors">@brunz_____</a>
             </p>
           </div>
         </header>
