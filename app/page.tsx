@@ -1,4 +1,5 @@
 import PageLayout from "@/components/PageLayout";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
@@ -25,10 +26,7 @@ export default function Home() {
 
         <ul className="space-y-4 pt-4">
           <li>
-            <a href="mailto:dan.brunsdon@gmail.com" className="group block">
-              <span className="font-semibold group-hover:underline">Email</span>
-              <p className="text-neutral-400">dan.brunsdon@gmail.com</p>
-            </a>
+            <ContactForm />
           </li>
           <li>
             <a
@@ -45,7 +43,7 @@ export default function Home() {
           </li>
           <li>
             <a
-              href="https://t.me/brunz_tech"
+              href="https://t.me/brunz_me"
               target="_blank"
               rel="noopener noreferrer"
               className="group block"
@@ -53,7 +51,7 @@ export default function Home() {
               <span className="font-semibold group-hover:underline">
                 Telegram
               </span>
-              <p className="text-neutral-400">@brunz_tech</p>
+              <p className="text-neutral-400">@brunz_me</p>
             </a>
           </li>
           <li>

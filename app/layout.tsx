@@ -8,8 +8,23 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Brunz',
-  description: 'Personal website',
+  title: {
+    default: 'Daniel Brunsdon — brunz.me',
+    template: '%s — brunz.me',
+  },
+  description: 'Developer, builder, and music obsessive based in Denver.',
+  openGraph: {
+    title: 'Daniel Brunsdon — brunz.me',
+    description: 'Developer, builder, and music obsessive based in Denver.',
+    type: 'website',
+    url: 'https://brunz.me',
+    images: [{ url: '/avatar-full.webp' }],
+  },
+  twitter: {
+    card: 'summary',
+    site: '@brunz_____',
+    creator: '@brunz_____',
+  },
 }
 
 export default function RootLayout({
