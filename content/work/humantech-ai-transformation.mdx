@@ -1,0 +1,54 @@
+---
+title: "AI Transformation at human.tech"
+date: "2025 — 2026"
+discipline: AI strategy & operations
+description: Redesigned a crypto identity startup's operating model around AI — replacing 5 SaaS tools, compressing 3 months of work into 3 days, and making the entire company legible to AI agents.
+---
+
+## The gap
+
+AI was creating a two-speed company. Engineering was seeing 30x productivity gains through Claude Code — but every other department was stuck at roughly 30% improvement. Marketing, BD, ops, HR — all using AI, all underwhelmed.
+
+The assumption was that non-technical work was harder to automate. That wasn't it. The real bottleneck was **legibility**: the company's knowledge was scattered across a dozen SaaS platforms that AI agents couldn't read, couldn't search, and couldn't act on. Notion wikis, Framer pages, password vaults, HR platforms — all walled gardens with their own auth, their own structure, their own search. Agents could write code because codebases are organized. Everything else was a mess.
+
+## The diagnosis
+
+I mapped the actual workflows — not the org chart, not the tool stack, the workflows. What surfaced: most non-engineering work followed a pattern of **gather context → make a decision → produce an output**. The gather step was where 70% of the time went, and it was where AI hallucinated most frequently. Agents were guessing because they couldn't see.
+
+The intervention point wasn't better prompts or fancier models. It was the information architecture underneath.
+
+## The redesign
+
+Built a structured internal knowledge system — indexed markdown with YAML frontmatter covering roadmap, OKRs, active tasks, CRM data, brand guidelines, product specs, and operational procedures. Everything an agent needed to do its job, in a format it could actually parse.
+
+Then built a unified credential layer across 25 services — AWS, Cloudflare, Twitter, databases, email, analytics, DNS providers. One interface for agents to authenticate and act, with human approval gates on anything destructive.
+
+This wasn't a cost play. It was a legibility play. The SaaS tools got replaced not because they were expensive, but because they were **opaque to AI**:
+
+- **Framer** → markdown site templates agents could generate and deploy
+- **Notion** → structured docs with machine-readable frontmatter
+- **Typefully** → direct API scheduling through the credential layer
+- **1Password** → unified secrets management agents could query
+- **HR platform** → structured employee data in the knowledge base
+
+Five tools eliminated. ~$5,700/yr in direct savings. But the savings were a side effect — the real unlock was that agents could now see everything.
+
+## The results
+
+The before/after was immediate:
+
+**Three months of work in three days.** A GTM push that would have taken a quarter — branded materials, campaign copy, partner outreach sequences, landing pages — was generated, reviewed, and shipped in a long weekend. Not by cutting corners. By removing the context-gathering bottleneck entirely.
+
+**Hallucinations went from frequent to near-zero.** When agents can reference the actual brand guidelines, the actual product specs, the actual CRM data — they stop making things up. Context management, not model selection, was the quality lever.
+
+**Non-engineering productivity went from +30% to multiplicative.** The structured docs system turned every department into something closer to a codebase — organized, searchable, version-controlled. The same Plan-Execute-Verify loop that made engineering fast now worked everywhere.
+
+**25 credentials, one interface.** Sensitive operations — DNS changes across cloud providers, production database migrations, infrastructure audits — handled through a single authenticated layer with human approval on anything irreversible.
+
+We wrote about the technical approach in detail on the [company blog](https://nanaknihal.com/2026/06/09/human-techs-ai-strategy/).
+
+## The takeaway
+
+Most companies are bolting AI onto existing workflows. The unlock isn't there. It's in making your company **legible to AI** — restructuring how knowledge is stored, accessed, and acted on so that agents can do the gather step as well as a tenured employee.
+
+You don't automate roles. You make your organization readable. The automation follows.
