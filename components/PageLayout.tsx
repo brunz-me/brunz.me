@@ -34,7 +34,7 @@ export default function PageLayout({ activeNav, children }: PageLayoutProps) {
                 Daniel Brunsdon
               </h1>
               <p className="text-[13px] leading-snug text-neutral-400">
-                Product + DevRel + Growth
+                Strategic Operator — AI, Developer Platforms, Growth
               </p>
             </div>
           </div>

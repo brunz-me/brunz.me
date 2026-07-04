@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PageLayout from "@/components/PageLayout";
 import ContactForm from "@/components/ContactForm";
 
@@ -6,20 +7,37 @@ export default function Home() {
     <PageLayout activeNav="about">
       <div className="space-y-6 text-[13px] leading-relaxed">
         <p>
-          I am a Product and DevRel leader building human.tech, currently
-          shipping agentic identity. Previously at Gitcoin and Twitter.
+          I&apos;m a Strategic Operator — the person companies bring in to turn
+          a messy, undefined problem into a working system. Over 13 years:
+          built developer platforms serving 5.9M users at Twitter, grew
+          Gitcoin Passport 2,000% through a company spinout, and took
+          human.tech from $0 to $1M ARR while stepping into a de facto Chief
+          of Staff role during an acquisition.
         </p>
 
         <p>
-          From developer ecosystems around public conversation to
-          privacy-preserving identity and now infrastructure for AI agents—I
-          keep asking the same question: how can we build a more human internet
-          without sacrificing privacy, security, and agency?
+          Most recently I&apos;ve been building production AI agent
+          infrastructure hands-on — not prompts, actual agent systems with
+          persistent memory, tool orchestration, and autonomous workflows —
+          and using it to redesign how an entire company operates. That&apos;s
+          the throughline: developer ecosystems, then privacy-preserving
+          identity, now AI transformation. Same question every time — how do
+          you build the system that makes the hard thing work.
+        </p>
+
+        <p className="text-neutral-400">
+          <strong className="text-black">Open to new roles</strong> — product,
+          ops, or AI transformation leadership at Series B–D companies.
+          Reach out below or see{" "}
+          <Link href="/work" className="underline hover:text-black">
+            recent work
+          </Link>
+          .
         </p>
 
         <p>
-          When I'm not working, I'm vibe-coding agents that handle the boring
-          stuff so I can spend more time biking, skiing, making music, rafting,
+          Outside of work: vibe-coding agents that handle the boring stuff so
+          I have more time for biking, skiing, making music, rafting,
           climbing, hanging out with my girlfriend and cat, and adventuring
           around the Western USA and Canada in my truck camper.
         </p>
