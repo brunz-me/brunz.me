@@ -1,0 +1,37 @@
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .coverletter-page {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+  .coverletter-page-inner {
+    padding: 0.3in 0.4in !important;
+    max-width: 100% !important;
+  }
+  .coverletter-content {
+    margin-top: 0 !important;
+  }
+  @page {
+    margin: 0;
+    size: letter;
+  }
+  a {
+    text-decoration: none !important;
+  }
+  p {
+    page-break-inside: avoid;
+  }
+}
+
+.coverletter-content p {
+  margin-bottom: 1em;
+}
