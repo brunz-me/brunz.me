@@ -2,11 +2,12 @@
   "name": "brunz.me",
   "version": "2.0.0",
   "private": true,
+  "packageManager": "pnpm@9.12.3",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
