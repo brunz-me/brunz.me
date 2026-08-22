@@ -1,0 +1,42 @@
+---
+title: "Waypoint"
+date: "2026"
+tags: [play]
+discipline: Full-stack engineering, AI product design
+description: An invite-only job-search assistant for friends and family. Upload a resume, let an AI interviewer build a rich profile of your experience, then score any job description against it and generate grounded, editable resumes, cover letters, and interview guides.
+links:
+  - label: Live app (invite-only)
+    href: https://job-search-platform-iota.vercel.app
+---
+
+## Context
+
+After running my own job search with a hand-built system of tailored resumes, interview prep docs, and job-board scrapers, friends and family kept asking for help with theirs. Most of them are non-technical — they didn't need my scripts, they needed the *system*: a complete picture of their experience, an honest read on how well a role fits, and application materials grounded in what they've actually done.
+
+Waypoint productizes that system into a tool anyone can use.
+
+## What it does
+
+**Foundation from documents** — upload a resume or LinkedIn export (PDF/DOCX/paste) and Claude extracts a structured profile: roles, achievements, skills, education. Every extracted fact gets a stable ID and provenance tracking.
+
+**An AI interviewer that fills the gaps** — a deterministic coverage engine scores the profile for what's missing (unquantified achievements, missing scope, no soft-skill evidence) and picks what to ask next; the model crafts one warm, plain-language question at a time. Answers become validated patch operations against the profile — never freeform edits. Progress is a visible completeness score, and sessions resume wherever you left off.
+
+**Job-fit scoring** — paste a job description (or a link) and get a 0–100 alignment score with a breakdown: strong matches, partial matches, and honest gaps with suggestions for how to address them. Every claimed match must cite the specific profile facts behind it.
+
+**Grounded document generation** — one click produces a tailored resume, cover letter, or interview guide. Anti-fabrication is architectural, not just prompted: every generated bullet carries `sourceFactIds`, the server rejects citations of facts that don't exist, and numbers that don't appear anywhere in the profile fail validation and force a retry.
+
+**Editing for non-technical users** — documents render as a live WYSIWYG preview. Click any text to edit it in place; hover a section for AI assists ("more concise", "more impactful", or a custom instruction) with a before/after diff to accept or discard. Print-perfect PDF export via a dedicated Letter-format print route.
+
+**Invite-only by design** — Google sign-in gated by an owner-managed allowlist, an admin panel for approving access requests, per-user daily AI token budgets, and usage tracking.
+
+## Stack
+
+- **Frontend**: Next.js 16 (App Router), TypeScript, vanilla-CSS design system (forest + ember palette, Fraunces/Inter/JetBrains Mono)
+- **AI**: Anthropic Claude — Opus for document generation, Sonnet for extraction/interview/scoring, Haiku for JD parsing; forced tool-use with Zod-validated schemas end to end
+- **Data**: Neon Postgres + Drizzle, versioned JSON profile documents with append-only snapshots and document revision history
+- **Auth**: Auth.js v5 with Google OAuth + allowlist enforcement in the sign-in callback
+- **Infra**: Vercel (Fluid Compute for long-running AI routes)
+
+## Design details I care about
+
+The profile is a single versioned document where every atom — an achievement, a skill, a piece of soft-skill evidence — carries a `factId`. That one decision powers the whole product: the interview loop targets gaps by fact, analyses cite facts as evidence, generated bullets trace back to facts, and the rewrite assistant only sees the facts a section actually cites. It's what lets the tool promise something most AI resume builders can't: it will never invent your experience.
