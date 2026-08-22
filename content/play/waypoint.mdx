@@ -21,11 +21,17 @@ Waypoint productizes that system into a tool anyone can use.
 
 **An AI interviewer that fills the gaps** — a deterministic coverage engine scores the profile for what's missing (unquantified achievements, missing scope, no soft-skill evidence) and picks what to ask next; the model crafts one warm, plain-language question at a time. Answers become validated patch operations against the profile — never freeform edits. Progress is a visible completeness score, and sessions resume wherever you left off.
 
+![The interview loop — one plain-language question at a time, with a live profile completeness score](/work/waypoint/interview.png)
+
 **Job-fit scoring** — paste a job description (or a link) and get a 0–100 alignment score with a breakdown: strong matches, partial matches, and honest gaps with suggestions for how to address them. Every claimed match must cite the specific profile facts behind it.
+
+![A job analysis — fit score, plain-English summary, documents up top, and a cited match breakdown](/work/waypoint/fit-score.png)
 
 **Grounded document generation** — one click produces a tailored resume, cover letter, or interview guide. Anti-fabrication is architectural, not just prompted: every generated bullet carries `sourceFactIds`, the server rejects citations of facts that don't exist, and numbers that don't appear anywhere in the profile fail validation and force a retry.
 
 **Editing for non-technical users** — documents render as a live WYSIWYG preview. Click any text to edit it in place; hover a section for AI assists ("more concise", "more impactful", or a custom instruction) with a before/after diff to accept or discard. Print-perfect PDF export via a dedicated Letter-format print route.
+
+![The resume editor — click any text to edit, hover a section for AI rewrite assists](/work/waypoint/resume-editor.png)
 
 **Invite-only by design** — Google sign-in gated by an owner-managed allowlist, an admin panel for approving access requests, per-user daily AI token budgets, and usage tracking.
 
