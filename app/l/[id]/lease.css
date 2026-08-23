@@ -1,0 +1,77 @@
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .lease-page {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+  .lease-page-inner {
+    padding: 0.3in 0.4in !important;
+    max-width: 100% !important;
+  }
+  .lease-content {
+    margin-top: 0 !important;
+  }
+  @page {
+    margin: 0;
+    size: letter;
+  }
+  a {
+    text-decoration: none !important;
+  }
+  h2 {
+    page-break-after: avoid;
+  }
+  h3 {
+    page-break-after: avoid;
+  }
+  ul,
+  ol {
+    page-break-inside: auto;
+  }
+  li {
+    page-break-inside: avoid;
+  }
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+  h3 + p {
+    break-before: avoid;
+  }
+}
+
+.lease-content h2 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  letter-spacing: -0.01em;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+.lease-content h3 {
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 1.2em;
+  margin-bottom: 0.4em;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+.lease-content hr {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 1.5em 0;
+}
+
+.lease-content strong {
+  font-weight: 600;
+}
